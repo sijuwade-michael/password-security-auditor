@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Security Auditor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔒 Password Security Auditor</h1>
+            <p>Check your password strength and security</p>
+        </header>
+
+        <!-- Password Check Section -->
+        <div class="card">
+            <h2>Check Password</h2>
+            <form id="checkForm">
+                <input 
+                    type="password" 
+                    id="passwordInput" 
+                    placeholder="Enter password to test"
+                    required
+                >
+                <button type="button" id="togglePassword">👁️ Show</button>
+                <button type="submit">Analyze Password</button>
+            </form>
+
+            <!-- Results will appear here -->
+            <div id="results" class="results hidden">
+                <div class="strength-badge" id="strengthBadge"></div>
+                
+                <div class="result-item">
+                    <strong>Score:</strong> <span id="score"></span>
+                </div>
+                
+                <div class="result-item">
+                    <strong>Entropy:</strong> <span id="entropy"></span> bits
+                </div>
+                
+                <div class="result-item">
+                    <strong>Feedback:</strong>
+                    <ul id="feedback"></ul>
+                </div>
+                
+                <div id="breachInfo" class="breach-info"></div>
+            </div>
+        </div>
+
+        <!-- Password Generator Section -->
+        <div class="card">
+            <h2>Generate Secure Password</h2>
+            <form id="generateForm">
+                <label>
+                    Length: <span id="lengthValue">16</span>
+                    <input 
+                        type="range" 
+                        id="lengthSlider" 
+                        min="12" 
+                        max="32" 
+                        value="16"
+                    >
+                </label>
+                
+                <label>
+                    <input type="checkbox" id="symbolsCheck" checked>
+                    Include symbols
+                </label>
+                
+                <button type="submit">Generate Password</button>
+            </form>
+
+            <div id="generatedPassword" class="generated hidden">
+                <div class="password-display" id="passwordDisplay"></div>
+                <button id="copyButton">📋 Copy</button>
+                <div class="gen-info" id="genInfo"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

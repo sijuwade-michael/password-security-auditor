@@ -1,0 +1,212 @@
+/* static/style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="password"],
+input[type="text"] {
+    padding: 15px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border 0.3s;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#togglePassword {
+    background: #6c757d;
+    padding: 10px 20px;
+    font-size: 0.9em;
+}
+
+/* Results Styling */
+.results {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.strength-badge {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.strength-WEAK {
+    background: #dc3545;
+    color: white;
+}
+
+.strength-MODERATE {
+    background: #ffc107;
+    color: #333;
+}
+
+.strength-STRONG {
+    background: #28a745;
+    color: white;
+}
+
+.result-item {
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+.result-item strong {
+    color: #667eea;
+}
+
+#feedback {
+    list-style: none;
+    padding-left: 0;
+}
+
+#feedback li {
+    padding: 8px 0;
+    font-size: 1em;
+}
+
+.breach-info {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.breach-warning {
+    background: #dc3545;
+    color: white;
+}
+
+.breach-safe {
+    background: #28a745;
+    color: white;
+}
+
+/* Generator Styling */
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em;
+}
+
+.generated {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.password-display {
+    padding: 20px;
+    background: white;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    font-size: 1.3em;
+    font-family: 'Courier New', monospace;
+    word-break: break-all;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.gen-info {
+    margin-top: 15px;
+    color: #666;
+    font-size: 0.95em;
+}
+
+#copyButton {
+    background: #28a745;
+    width: 100%;
+} 
