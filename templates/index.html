@@ -18,6 +18,21 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="lock-icon">🔒</div>
+            <h2>Password Security Auditor</h2>
+            <div class="loading-spinner"></div>
+            <p>Loading security tools...</p>
+        </div>
+    </div>
+
+    <!-- Your existing content -->
+    <div class="container" id="mainContent" style="display: none;">
+        <!-- All your existing HTML stays here -->
+
     <div class="container">
         <header>
             <h1>🔒 Password Security Auditor</h1>

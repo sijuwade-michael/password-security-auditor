@@ -193,6 +193,23 @@ if (copyButton) {
         });
     });
 }
+
+// Hide loading screen when page is fully loaded
+window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    const mainContent = document.getElementById('mainContent');
+    
+    // Simulate minimum loading time (so it doesn't flash)
+    setTimeout(() => {
+        loadingScreen.classList.add('fade-out');
+        mainContent.style.display = 'block';
+        
+        // Remove loading screen from DOM after fade
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }, 800); // Minimum 800ms loading time
+});
 // ```
 
 // ---
